@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Novo Pedido</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container">
+			<div class="jumbotron mb-0">
+				<h1 class="display-4">Novo Pedido</h1>
+			</div>
+			<div class="card mt-3">
+				<form th:object="${requisicaoNovoPedido}" class="card-body" action="/pedido/novo" method="post">
+					<div class="form-group" >
+						<label for="nomeProduto">Produto</label>
+						<input th:field="*{nomeProduto}" th:errorclass="is-invalid" class="form-control" placeholder="Nome do produto"/>
+						<small>Informa qual o nome do produto.</small>
+						<div class="invalid-feedback" th:errors="*{nomeProduto}">
+							Erros do nome do produto
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="urlProduto">Url</label>
+						<input th:field="*{urlProduto}" th:errorclass="is-invalid" class="form-control" placeholder="Url do produto"/>
+						<small>Procure em um site o produto que você deseja e cole a url aqui.</small>
+						<div class="invalid-feedback" th:errors="*{urlProduto}">
+							Erros da url
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="urlImagem">Imagem</label>
+						<input th:field="*{urlImagem}" th:errorclass="is-invalid" class="form-control" placeholder="Url da imagem"/>
+						<small>Copie em um site a url da imagem do produto que você deseja e cole a url aqui.</small>
+						<div class="invalid-feedback" th:errors="*{urlImagem}">
+							Erros da url imagem
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="descricao">Descricao</label>
+						<textarea th:field="*{descricao}" th:errorclass="is-invalid" class="form-control" placeholder="Adicione detalhes importantes para ajudar o comprador"/></textarea>
+					    <div class="invalid-feedback" th:errors="*{descricao}">
+							Erros da descricao
+						</div>
+					</div>
+					<button class="btn btn-primary mt-3" type="submit">Cadastrar</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
