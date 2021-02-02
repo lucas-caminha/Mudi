@@ -1,7 +1,6 @@
 # Mudi
 > O que é o Mudi?
-
-> Mudi é uma aplicação Spring MVC e Spring Security criada para prática de desenvolvimento destes Frameworks.
+> Mudi é um projeto desenvolvido no curso Spring MVC da Alura.
 
 Tecnologias Utilizadas: 
   * Spring MVC
