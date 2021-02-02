@@ -9,3 +9,11 @@ Thymeleaf tem a vantagem de usar atributos para definir a expression language
 Para definir uma classe que responde uma requisição HTTP, usamos as anotações:
 @Controller, @GetMapping entre outras opções
 Métodos que atendem requisições HTTP são chamados de action
+
+
+create table authorities (
+    username varchar(50) not null,
+    authority varchar(50) not null,
+    constraint fk_authorities_users foreign key(username) references users(username)
+);
+create unique index ix_auth_username on authorities (username,authority);
