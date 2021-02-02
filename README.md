@@ -1,5 +1,4 @@
 # Mudi
-> O que é o Mudi?
 > Mudi é um projeto desenvolvido no curso Spring MVC da Alura.
 
 Tecnologias Utilizadas: 
