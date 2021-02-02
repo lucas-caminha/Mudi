@@ -18,7 +18,7 @@ public class Oferta {
 	private BigDecimal valor;
 	private LocalDate dataDaEntrega;
 	private String comentario;
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	private Pedido pedido;
 	
 	public Long getId() {

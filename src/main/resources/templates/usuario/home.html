@@ -60,6 +60,11 @@
 					</div>
 				</div>
 			</div>
+			 <div th:if="${pedidos != null}">
+				<div th:replace="~{base :: paginacao}"></div>
+			</div>
+			 
+
 		</div>
 	</body>
 </html>

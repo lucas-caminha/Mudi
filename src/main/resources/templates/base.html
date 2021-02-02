@@ -44,4 +44,16 @@
 <div th:fragment="titulo(nomeTitulo)" class="jumbotron mb-1 mt-1">
 	<h1 class="display-4" th:text="${nomeTitulo}"></h1>	
 </div>
-			
+
+<div th:fragment="paginacao">
+	<nav aria-label="Page navigation example">
+	  <ul class="pagination">
+	    <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+	    <li class="page-item"><a class="page-link" href="#">1</a></li>
+	    <li class="page-item"><a class="page-link" href="#">2</a></li>
+	    <li class="page-item"><a class="page-link" href="#">3</a></li>
+	    <li class="page-item"><a class="page-link" href="#">Próximo</a></li>
+	  </ul>
+	</nav>
+</div>
+	

@@ -28,7 +28,8 @@ public class PedidoController {
 	private PedidoRepository pedidoRepository;
 	@Autowired
 	private UserRepository userRepository;
-
+	
+	
 	@GetMapping("formulario")
 	public String formulario(RequisicaoNovoPedido req) {
 		return "pedido/formulario";
@@ -51,5 +52,7 @@ public class PedidoController {
 		
 		return "redirect:/home";
 	}
+
+	
 	
 }
